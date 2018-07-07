@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Security;
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
@@ -11,16 +11,17 @@ class SecurityController extends AbstractController
 {
     /**
      * @Route("/login", name="security_login")
+     * @Template("security/login.html.twig")
      */
-    public function login(AuthenticationUtils $helper): Response
+    public function loginAction(AuthenticationUtils $helper)
     {
-        return $this->render('Security/login.html.twig', [
+        return [
 
             // dernier username saisi (si il y en a un)
             'last_username' => $helper->getLastUsername(),
             // La derniere erreur de connexion (si il y en a une)
             'error' => $helper->getLastAuthenticationError(),
-        ]);
+        ];
     }
 
     /**

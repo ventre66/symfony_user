@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller ;
+namespace App\Controller\Admin;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -8,17 +8,18 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
  * Class TestController
- * @Route("/test")
+ * @Route("/admin")
  */
-class TestController extends Controller
+class AdminController extends Controller
 {
     /**
-     * @Route("/", name="index")
-     * @Template("test/index.html.twig")
+     * @Route("/", name="admin")
+     * @Template("admin/admin.html.twig")
      */
-    public function index()
+    public function admin()
     {
 
     }
+
 
 }

@@ -9,13 +9,15 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/TestController.php'|file_link(0) }}">src/Controller/TestController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/test/index.html.twig'|file_link(0) }}">templates/test/index.html.twig</a></code></li>
-    </ul>
+    <h1>Hello</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="{{ path('security_login') }}"><button type="button" class="btn btn-primary">Connexion</button></a>
+        </div>
+        <div class="col-md-3">
+            <a href="{{ path('user_registration') }}"><button type="button" class="btn btn-success">inscription</button></a>
+        </div>
+    </div>
 </div>
-    <a href="{{ path('security_login')}}"> Connexion</a>
+
 {% endblock %}

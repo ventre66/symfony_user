@@ -2,20 +2,23 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-
+/**
+ * Class TestController
+ * @Route("/test")
+ */
 class TestController extends Controller
 {
     /**
-     * @Route("/test", name="index")
+     * @Route("/", name="index")
      * @Template("test/index.html.twig")
      */
     public function index()
     {
-        return ['controller_name' => 'TestController'];
+
     }
 
     /**

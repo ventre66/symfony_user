@@ -43,7 +43,7 @@ class RegistrationController extends Controller
             $event = new GenericEvent($user);
             $eventDispatcher->dispatch(Events::USER_REGISTERED, $event);
 
-            return $this->redirectToRoute('test');
+            return $this->redirectToRoute('index');
         }
 
         return array('form' => $form->createView());

@@ -30,7 +30,15 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="string")
      * @Assert\NotBlank()
      */
-    private $fullName;
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     */
+    private $prenom;
 
     /**
      * @var string
@@ -68,14 +76,36 @@ class User implements UserInterface, \Serializable
         return $this->id;
     }
 
-    public function setFullName(string $fullName): void
+    /**
+     * @return string
+     */
+    public function getNom(): ?string
     {
-        $this->fullName = $fullName;
+        return $this->nom;
     }
 
-    public function getFullName(): ?string
+    /**
+     * @param string $nom
+     */
+    public function setNom(string $nom): void
     {
-        return $this->fullName;
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param string $prenom
+     */
+    public function setPrenom(string $prenom): void
+    {
+        $this->prenom = $prenom;
     }
 
     public function getUsername(): ?string

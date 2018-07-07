@@ -1,8 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Bienvenue {{ app.user.nom}} {{ app.user.prenom}}  !
-
+    <div class="jumbotron">
+        <div class="well">
+           <h1>Bienvenue {{ app.user.prenom}} {{ app.user.nom}}  !</h1>
+        </div>
+        <div>
+            <a href="{{ path('security_logout') }}"><button type="button" class="btn btn-danger">Déconnexion</button></a>
+        </div>
+    </div>
 {% endblock %}
 
 

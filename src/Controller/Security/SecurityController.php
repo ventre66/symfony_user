@@ -13,7 +13,7 @@ class SecurityController extends AbstractController
      * @Route("/login", name="security_login")
      * @Template("security/login.html.twig")
      */
-    public function loginAction(AuthenticationUtils $helper)
+    public function login(AuthenticationUtils $helper)
     {
         return [
 

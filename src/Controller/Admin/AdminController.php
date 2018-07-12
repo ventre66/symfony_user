@@ -18,7 +18,13 @@ class AdminController extends Controller
      */
     public function admin()
     {
+        $listAdverts = array(
+            array('id' => 2, 'title' => 'Recherche développeur Symfony'),
+            array('id' => 5, 'title' => 'Mission de webmaster'),
+            array('id' => 9, 'title' => 'Offre de stage webdesigner')
+        );
 
+        return array('listAdverts' => $listAdverts);
     }
 
 

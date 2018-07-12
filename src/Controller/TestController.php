@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
  * Class TestController
- * @Route("/test")
+ * @Route("/")
  */
 class TestController extends Controller
 {

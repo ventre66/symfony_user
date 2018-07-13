@@ -20,7 +20,7 @@ class RegistrationController extends Controller
     /**
      * @Route("/register", name="user_registration")
      * @Security("has_role('ROLE_ADMIN')")
-     * @Template("register.html.twig")
+     * @Template("register/register.html.twig")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, EventDispatcherInterface $eventDispatcher)
     {
